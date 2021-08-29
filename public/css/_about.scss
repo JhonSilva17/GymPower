@@ -1,0 +1,49 @@
+#about {
+    margin: $gap-section 0;
+
+    @include media(768px) {
+        margin-bottom: ($gap-section - 6.4rem);
+    }
+
+    @include media(540px) {
+        margin: ($gap-section - 6.4rem) 0
+    }
+
+
+    @include media(540px) {
+        h2 {
+            margin-bottom: 3.2rem
+        }
+    }
+
+    .container-content {
+        @extend .grid;
+        gap: 6.4rem;
+
+        @include media(540px) {
+            gap: 3.2rem;
+        }
+    }
+
+    .about-content {
+        align-self: center;
+        p {
+            color: $white;
+            @include font(18);
+            line-height: 1.75 ;
+            margin-bottom: 3.2rem;
+
+            @include media(540px) {
+                @include font(16);
+            }
+        }
+  
+        @include media(540px) {
+            grid-row: 2;    
+        }
+    }
+
+    img {
+        border-radius: .4rem;
+    }
+}

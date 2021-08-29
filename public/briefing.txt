@@ -1,0 +1,82 @@
+Passo 1 - Dados sobre a empresa
+
+- Histórico da empresa
+A academia Gym Power tem uma ótima reputação na região,
+já foi premiada algumas vezes por veículos de mídia locais
+como a melhor academia de Jiu Jitsu e Musculação de todo
+o estado. 
+
+A Gym Power além de oferecer diversas opções para atividades
+físicas, oferece: qualidade, segurança e saúde; investem muito
+na experiência do seu cliente, trazendo para a vida deles uma
+saúde de qualidade.
+
+Passo 2 - Dados sobre os serviços ofertados
+
+- Quais são os serviços ofertados?
+
+Aulas de dança (ballet fitness, zumba, street dance)
+Musculação
+Artes Marciais (Boxe, Jiu Jitsu, Muay Thay)
+Pilates
+
+- Informações sobre os serviços
+
+Aulas de dança:  A procura por aulas de dança tem se destacado 
+nos últimos anos. Muitas pessoas que consideram a musculação
+uma atividade entediante, buscam na dança uma alternativa para 
+queimar calorias de forma divertida e descontraída. São diversos 
+os estilos musicais e coreografias oferecidas em aulas de dança, 
+tais como: ballet fitness, zumba, zouk, street dance, dentre outros.
+
+Musculação: Outro exercício físico tradicional que não perde seu 
+espaço é a musculação. Embora muito procurada por homens, 
+ela também vem ganhando a adesão de mulheres. Trata-se de 
+um exercício mais metódico, buscado particularmente por quem 
+tem um foco maior em moldar o corpo de forma controlada e 
+sistemática. É comum que a musculação seja combinada com 
+atividades aeróbicas, pois a queima de gorduras é indispensável 
+para a apresentação visível dos músculos desenvolvidos.
+
+Artes Marciais: Assim como a ioga, as lutas de tradição oriental 
+também atraem adeptos já há algum tempo. Elas se destacam 
+pela filosofia e movimentos que envolvem o uso inteligente do 
+corpo, sem necessariamente o uso da força. Isso não quer dizer
+que seja mais fácil! É apenas uma lógica diferente, por exemplo,
+do box, no qual o peso é um fator relevante, mas que também é 
+uma luta bastante procurada nas academias.
+
+Pilates: Pilates não é uma simples forma de ginástica, é um método para educar nosso corpo de uma forma consciente e equilibrada, tornando-o apto tanto para a vida cotidiana quanto para o uso profissional. Sua gama de aplicabilidade é bem ampla, indo desde a pós-reabilitação até o condicionamento físico de atletas, por isso se tornou um método tão famoso no mundo inteiro e praticado por diversos públicos: idosos, crianças, gestantes, atletas, bailarinos etc.
+
+-- --- -- --- -- --- -- --- -- --- -- --- -- --- -- --- -- --- --
+
+Arquitetura da informação
+
+1 - Header: Teremos um header com a logo e o menu de navegação do
+site.
+
+2 - Hero: Seção onde será apresentada informações iniciais
+sobre a empresa, um título e um pequeno texto chamativo
+para atrair a atenção do cliente.
+
+3 - About:  Seção onde será aprensetada a história da empresa
+e uma fota sobre a academia.
+
+4 - Services: Uma seção bastante importante, iremos aprensentar
+todos os serviços oferecidos pela academia
+
+5 - Contato: Informações de contato - redes sociais, email,
+endereço.
+
+6 - Por último um rodapé
+
+
+
+
+
+
+
+
+
+
+

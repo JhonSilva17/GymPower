@@ -1,0 +1,200 @@
+// Variáveis
+$hue: 190;
+$bg-body: hsl($hue, 47%, 3%);
+$primary-color: hsl($hue, 98%, 57%);
+$bg-section1: hsl($hue, 0%, 9%);
+$bg-header-ativo: hsla($hue, 47%, 3%, 0.7);
+$bg-section2: hsl($hue, 16%, 14%);
+$white: hsl($hue, 0%, 100%);
+$gap-section: 20rem;
+
+// Mixins
+@mixin font($size) {
+    @if $size == 14 {
+        font-size: 1.4rem;
+    } @else if $size == 16 {
+        font-size: 1.6rem;
+    } @else if $size == 18 {
+        font-size: 1.8rem;
+    } @else if $size == 20 {
+        font-size: 2rem;
+    } @else if $size == 24 {
+        font-size: 2.4rem;
+    } @else if $size == 32 {
+        font-size: 3.2rem;
+    } @else if $size == 48 {
+        font-size: 4.8rem;
+    } @else if $size == 64 {
+        font-size: 6.4rem;
+    }
+}
+
+@mixin media($size) {
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}
+
+// Reset
+:root {
+    font-size: 62.5%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after, *::before {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins';
+    line-height: 1.35;
+}
+
+h2, h3 {
+    @include font(48);
+    color: $white;
+
+    @include media(768px) {
+        @include font(32);
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 2px;
+        background: $primary-color;
+        border-radius: .4rem;
+        margin-top: 1rem ;
+    
+        @include media(768px) {
+            width: 40px;
+            margin-top: .5rem;
+        }
+    }
+}
+
+p, a, span, li {
+    font-family: 'Montserrat';
+    line-height: 1.5;
+}
+
+body {
+    background-color: $bg-body;
+}
+
+
+
+// Classes
+ .container {
+     max-width: 80%;
+     margin: 0 auto;
+     @include media(768px) {
+         max-width: 90%;
+     }
+ }
+
+ .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+ }
+
+ .icon {
+    color: $white;
+    @include font(32);
+    cursor: pointer;
+    padding: 1rem;
+
+    @include media(426px) {
+        @include font(24);
+    }
+ }
+
+ .media {
+    ul {
+        display: flex;
+        gap: 3.2rem;
+         li {
+             a {
+                 color: $white;
+                 @include font(32);
+                 display: inline-block;
+                 transition: transform .3s;
+
+                 &:hover {
+                     transform: translateY(-5px);
+                 }
+             }
+         }
+    }
+ }
+
+ .grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+
+     @include media(540px) {
+        grid-template-columns: auto;
+    }
+ }
+
+ .btn {
+     background: $primary-color;
+     color: $white;
+     padding: 1.6rem 3.2rem;
+     display: inline-block;
+     border-radius: .4rem;
+     @include font(20);
+     font-weight: bold;
+     transition: background .3s ease;
+     @include media(960px) {
+        @include font(16);
+    }
+
+     &:hover {
+         background: darken($color: $primary-color, $amount: 15);
+     }
+ }
+
+ .bg-light {
+     background: $bg-section2;
+ }
+
+ .bg-dark {
+     background: $bg-section1;
+ }
+
+ .flex-between {
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

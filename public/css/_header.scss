@@ -1,0 +1,127 @@
+header {
+    padding-top: 3.2rem;
+
+    @include media(426px) {
+        padding-top: 2rem;
+    }
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100001;
+
+    &.ativo {
+        position: fixed;
+        background: $bg-header-ativo;
+        padding: 1.6rem 0;
+        animation: surgirMenu .2s ease;
+
+        @include media(768px){ 
+            padding: 1rem 0;
+        }
+    }
+
+    .container {
+        @extend .flex-between;
+    }
+
+    @include media(768px) {
+        .header-logo {
+            width: 25%;
+        }
+    }
+
+    @include media(426px) {
+        .header-logo {
+            width: 40%;
+        }
+    }
+
+    nav {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background: $bg-section2;
+        width: 50%;
+        padding: 0 6.4rem;
+        z-index: 1001;
+
+        @include media(426px) {
+            width: 90%;
+            padding: 0 3.2rem;
+        }
+
+        transition: transform .5s ease;
+        transform: translateX(100%);
+
+        &.ativo {
+            transform: translateX(0%);
+        }
+
+        .icon {
+            position: absolute;
+            top: 3.2rem;
+            right: 3.2rem;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            width: 60%;
+            @include media(426px) {
+                width: 90%;
+            }
+            li {
+                & + li {
+                    border-top: 1px solid rgba(255, 255, 255, 0.158);
+                }
+                a {
+                    color: $white;
+                    padding: 3.2rem 0;
+                    @include font(32);
+                    font-weight: 500;
+                    display: inline-block;
+                    position: relative;
+                    @include media(768px) {
+                        @include font(24);
+                        padding: 2.4rem 0;
+                    }
+
+                    @include media(426px) {
+                        @include font(18)
+                    }
+
+                    &::after {
+                        content: '';
+                        width: 0%;
+                        height: 2px;
+                        background-color: $primary-color;
+                        display: block;
+                        position: absolute;
+                        bottom: 0rem;
+        
+                        border-radius: .25rem;
+                        transition: width .3s;
+                    }
+        
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+            }   
+        }
+    }
+}
+
+@keyframes surgirMenu {
+    from {
+        transform: translateY(-20px);
+    } 
+    to {
+        transform: translateY(0);
+    }
+}

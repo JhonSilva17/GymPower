@@ -1,0 +1,39 @@
+#services {
+    .container-content {
+        .services-item {
+            @extend .grid;
+            align-items: center;
+
+            .item-content {
+                max-width: 80%;
+                margin: 0 auto;
+                padding: 2rem 0;
+
+                @include media(540px)  {
+                    max-width: 90%;
+                    grid-row: 2;
+                    padding: 4.8em 0
+                }
+
+                h3 {
+                    @include font(32);
+                    color: $white;
+
+                    @include media(768px) {
+                        @include font(24);
+                    }
+                }
+                p {
+                    @include font(18);
+                    color: $white;
+                    margin-top: 3.2rem;
+                    line-height: 1.75;
+
+                    @include media(768px) {
+                        @include font(14);
+                    }
+                }
+            }
+        }
+    }
+}
